@@ -95,7 +95,7 @@ Source: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/da
 
 Tables used: `orders`, `order_items`, `customers`, `order_reviews`.
 
-'data/order_fact.csv.zip' is the exported output of the SQL script, included so the notebook runs without a database. The raw Olist tables are not included. Download them from Kaggle to rebuild it.
+`data/order_fact.csv.zip` is the exported output of the SQL script, included so the notebook runs without a database. The raw Olist tables are not included. Download them from Kaggle to rebuild it.
 
 ### Validation checks
 
@@ -137,7 +137,7 @@ where-fulfillment-breaks/
 ├── sql/
 │   └── build_order_fact.sql
 ├── data/
-│   └── data/order_fact.csv.zip
+│   └── order_fact.csv.zip
 ├── notebooks/
 │   └── analysis.ipynb
 ├── dashboard/
@@ -151,7 +151,7 @@ where-fulfillment-breaks/
 
 1. Download the Olist dataset from Kaggle and load the four tables into PostgreSQL.
 2. Run `sql/build_order_fact.sql` and export the `order_fact` table to `data/order_fact.csv`.
-3. Run notebooks/analysis.ipynb top to bottom. It reads 'data/order_fact.csv.zip'.
+3. Run notebooks/analysis.ipynb top to bottom. It reads `data/order_fact.csv.zip`.
 4. Open `dashboard/where_fulfillment_breaks.pbix` in Power BI Desktop. The data is stored inside the file, so no setup is needed. The dashboard was built from the notebook's output, which adds the lateness flag, delay buckets and fault labels to `order_fact`.
 
 ---
